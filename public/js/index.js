@@ -58,9 +58,8 @@ presentarMazo = () => {
 }
 
 startApp = () => {
-    IdMazo.innerHTML = ` <img src="img/mazo.jpg" alt=""> `
-
     Init = () => {
+        document.body.style.backgroundImage = "url('img/fondo.jpg')"
         firstStep.remove()
         InitPogram.innerHTML = 
         `
@@ -100,7 +99,6 @@ seleccion = (i) => {
 devolucion_1 = (lis) => {
     console.log("en devolucion uno: llegan los elementos: ", lis)
     IdTodo.remove()
-    document.body.style.backgroundImage = "url('img/fondo.jpg')"
     InitPogram.innerHTML = 
         `
         <div id="devolucion1">
@@ -142,9 +140,16 @@ devolucion_2 = (l1, l2, l3) => {
     InitPogram.innerHTML =
     `
         <div id="devolucion2">
-            <h1 style="color:black;">
-                ${Carta["_"+(l1+1)][0]}, ${Carta["_"+(l2+1)][1]} ${Carta["_"+(l3+1)][2]}
-            </h1>
+            <div class="row row-cols-4">
+                <div class="col">
+
+                </div>
+                <div class="col-6">
+                    <h1 style="color:black;">
+                        ${Carta["_"+(l1+1)][0]}, ${Carta["_"+(l2+1)][1]} ${Carta["_"+(l3+1)][2]}
+                    </h1>
+                </div>
+            </div>
         </div>
     `
 }
