@@ -32,7 +32,7 @@ const Carta = {
 CrearMazo = () => {
     nombreCarta = `<img src="img/The-Estensi-Tarot-deck-`
     parametros = (i) => {
-        return `.jpg" width="150" height="210" onclick="seleccion(${i})">`
+        return `.jpg" width="150" height="210" class="efectoCartas" onclick="seleccion(${i})">`
     }
     parametrosAviso = `.jpg" width="150" height="207">`
 
@@ -58,22 +58,23 @@ presentarMazo = () => {
 }
 
 startApp = () => {
-    Init = () => {
-        document.body.style.backgroundImage = "url('img/fondo.jpg')"
-        firstStep.remove()
-        InitPogram.innerHTML = 
-        `
-        <div class="row mx-4 my-2">
-            <div class="col">
-                <div id="IdTodo">
+    document.body.style.backgroundImage = "url('img/fondo.jpg')"
+    document.body.style.backgroundSize = "100%"
+    firstStep.remove()
+    InitPogram.innerHTML = 
+    `
+    <div class="row mx-4 my-2">
+        <div class="col">
+            <div id="IdTodo">
 
-                </div>
             </div>
         </div>
-        `
-        IdTodo = document.getElementById("IdTodo")
-        presentarMazo()
-    }
+    </div>
+    `
+    IdTodo = document.getElementById("IdTodo")
+    presentarMazo()
+    document.getElementById("estilos").href = "css/estiloCartas.css"
+
 }
 
 lista = []
@@ -101,41 +102,39 @@ devolucion_1 = (lis) => {
     IdTodo.remove()
     InitPogram.innerHTML = 
         `
-        <div id="devolucion1">
-            <div class="row row-cols-4" style="height:250px; color:white;">
+        <div class="container-fluid">
+            <div id="devolucion1">
+                <div class="row row-cols-4" style="height:250px; color:white;">
 
-            </div>
+                </div>
 
-            <div class="row row-cols-4" style="height:250px; color:black;" onclick="devolucion_2(${lis})">
-                <div class="col">
+                <div class="row row-cols-4" style="height:250px; color:black;" onclick="devolucion_2(${lis})">
+                    <div class="col">
+                    </div>
+                    <div class="col col-6 mx-1">
+                        <h1>  </h1>
+                    </div>
                 </div>
-                <div class="col col-6 mx-1">
-                    <h1> El consejo que te da el Tarot es: </h1>
-                </div>
-            </div>
 
-            <div class="row row-cols-6" style="color:black;">
-                <div class="col-5">
+                <div class="row row-cols-6" style="color:black;">
+                    <div class="col-5">
+                    </div>
+                    <div class="col mx-1">
+                        <h2></h2>
+                    </div>
+                    <div class="col">
                 </div>
-                <div class="col mx-1">
-                    <h2>(click)</h2>
-                </div>
-                <div class="col">
             </div>
         </div>
-    </div>
-    `
+        `
 } 
 
 devolucion_2 = (l1, l2, l3) => {
 
+    document.body.style.backgroundImage = "url('img/fondo2.jpg')"
     console.log("en devolucion dos: llegan los 3 elementos: ", l1, l2, l3)
     const devolucion1 = document.getElementById("devolucion1")
     devolucion1.remove()
-    console.log("las siguientes son las cartas elejidas:")
-    console.log(Carta["_"+(l1+1)],Carta["_"+(l2+1)],Carta["_"+(l3+1)])
-    console.log("y estos sus significados:")
-    console.log(Carta["_"+(l1+1)][0],", ",Carta["_"+(l2+1)][1],Carta["_"+(l3+1)][2])
     
     InitPogram.innerHTML =
     `
@@ -144,14 +143,12 @@ devolucion_2 = (l1, l2, l3) => {
                 <div class="col">
 
                 </div>
-                <div class="col-6">
-                    <h1 style="color:black;">
+                <div class="col-6 text-center my-5">
+                    <h1 style="color:black;"><b>
                         ${Carta["_"+(l1+1)][0]}, ${Carta["_"+(l2+1)][1]} ${Carta["_"+(l3+1)][2]}
-                    </h1>
+                    </b></h1>
                 </div>
             </div>
         </div>
     `
 }
-
-startApp()
