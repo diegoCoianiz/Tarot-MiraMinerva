@@ -32,7 +32,7 @@ const Carta = {
 CrearMazo = () => {
     nombreCarta = `<img src="img/The-Estensi-Tarot-deck-`
     parametros = (i) => {
-        return `.jpg" width="150" height="210" class="efectoCartas" onclick="seleccion(${i})">`
+        return `.jpg" width="150" height="210" class="efectoCartas" id="cartaSeleccionada-${i}" onclick="seleccion(${i})">`
     }
     parametrosAviso = `.jpg" width="150" height="207">`
 
@@ -79,6 +79,10 @@ startApp = () => {
 
 lista = []
 seleccion = (i) => {
+
+    cartaSeleccionada = document.getElementById(`cartaSeleccionada-${i}`)
+    cartaSeleccionada.style.cssText = "filter: grayscale(80%);"
+
     agregar = true
     
     if (lista.length == 0) {
