@@ -32,9 +32,9 @@ const Carta = {
 CrearMazo = () => {
     nombreCarta = `<img src="img/The-Estensi-Tarot-deck-`
     parametros = (i) => {
-        return `.jpg" width="150" height="210" class="efectoCartas" id="cartaSeleccionada-${i}" onclick="seleccion(${i})">`
+        return `.jpg" width="145rem" height="210rem" class="efectoCartas" id="cartaSeleccionada-${i}" onclick="seleccion(${i})">`
     }
-    parametrosAviso = `.jpg" width="150" height="207">`
+    parametrosAviso = `.jpg" width="145rem" height="207rem">`
 
     CartasTarot = {}
     for(i=0 ; i < 24 ; i++) {
@@ -59,12 +59,12 @@ presentarMazo = () => {
 
 startApp = () => {
     document.body.style.backgroundImage = "url('img/fondo_1.jpg')"
-    document.body.style.backgroundSize = "100%"
+    document.body.style.backgroundSize = "95%"
     firstStep.remove()
     InitPogram.innerHTML = 
     `
     <div class="container-fluid">
-        <div class="row mx-4 my-2">
+        <div class="row mx-5 my-2">
             <div class="col">
                 <div id="IdTodo">
                 </div>
