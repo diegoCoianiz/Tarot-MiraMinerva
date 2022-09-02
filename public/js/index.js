@@ -140,7 +140,7 @@ devolucion_2 = (lis) => {
     console.log(lis)
 
     l1 = lis[0], l2 = lis[1], l3 = lis[2]
-    document.body.style.backgroundImage = "url('img/fondo_2.jpg')"
+    document.body.style.backgroundImage = "url('img/fondo_22.jpg')"
     console.log("en devolucion dos: llegan los 3 elementos: ", l1, l2, l3)
     const devolucion1 = document.getElementById("devolucion1")
     devolucion1.remove()
