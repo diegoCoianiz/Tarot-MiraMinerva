@@ -58,15 +58,16 @@ presentarMazo = () => {
 }
 
 startApp = () => {
-    document.body.style.backgroundImage = "url('img/fondo.jpg')"
+    document.body.style.backgroundImage = "url('img/fondo_1.jpg')"
     document.body.style.backgroundSize = "100%"
     firstStep.remove()
     InitPogram.innerHTML = 
     `
-    <div class="row mx-4 my-2">
-        <div class="col">
-            <div id="IdTodo">
-
+    <div class="container-fluid">
+        <div class="row mx-4 my-2">
+            <div class="col">
+                <div id="IdTodo">
+                </div>
             </div>
         </div>
     </div>
@@ -102,7 +103,6 @@ seleccion = (i) => {
 }
 
 devolucion_1 = (lis) => {
-    console.log("en devolucion uno: llegan los elementos: ", lis)
     IdTodo.remove()
     InitPogram.innerHTML = 
         `
@@ -134,15 +134,13 @@ devolucion_1 = (lis) => {
     setTimeout(() => {
         devolucion_2(lis)
     }, 3000);
-
-    //onclick="devolucion_2(${lis})"
 } 
 
 devolucion_2 = (lis) => {
     console.log(lis)
 
     l1 = lis[0], l2 = lis[1], l3 = lis[2]
-    document.body.style.backgroundImage = "url('img/fondo2.jpg')"
+    document.body.style.backgroundImage = "url('img/fondo_2.jpg')"
     console.log("en devolucion dos: llegan los 3 elementos: ", l1, l2, l3)
     const devolucion1 = document.getElementById("devolucion1")
     devolucion1.remove()
@@ -154,13 +152,13 @@ devolucion_2 = (lis) => {
                 <div class="col">
 
                 </div>
-                <div class="col-6 text-center my-5">
+                <div class="col-6 text-center my-5" style="height:250px;">
                     <div class="row">
                         <h1 style="color:black;"><b>
                             ${Carta["_"+(l1+1)][0]}, ${Carta["_"+(l2+1)][1]} ${Carta["_"+(l3+1)][2]}
                         </b></h1>
                     </div>
-                <div class="row mt-5" style="height:250px;" >
+                <div class="row mt-5" class="efectoCartas" style="height:250px;" >
                     <a href="https://www.facebook.com/profile.php?id=100083412135292" target="_blank"> </a>
                 </div>
                 </div>
