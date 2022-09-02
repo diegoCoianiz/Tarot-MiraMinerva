@@ -112,7 +112,7 @@ devolucion_1 = (lis) => {
 
                 </div>
 
-                <div class="row row-cols-4" style="height:250px; color:black;" onclick="devolucion_2(${lis})">
+                <div class="row row-cols-4" style="height:250px; color:black;">
                     <div class="col">
                     </div>
                     <div class="col col-6 mx-1">
@@ -131,10 +131,17 @@ devolucion_1 = (lis) => {
             </div>
         </div>
         `
+    setTimeout(() => {
+        devolucion_2(lis)
+    }, 3000);
+
+    //onclick="devolucion_2(${lis})"
 } 
 
-devolucion_2 = (l1, l2, l3) => {
+devolucion_2 = (lis) => {
+    console.log(lis)
 
+    l1 = lis[0], l2 = lis[1], l3 = lis[2]
     document.body.style.backgroundImage = "url('img/fondo2.jpg')"
     console.log("en devolucion dos: llegan los 3 elementos: ", l1, l2, l3)
     const devolucion1 = document.getElementById("devolucion1")
@@ -148,9 +155,14 @@ devolucion_2 = (l1, l2, l3) => {
 
                 </div>
                 <div class="col-6 text-center my-5">
-                    <h1 style="color:black;"><b>
-                        ${Carta["_"+(l1+1)][0]}, ${Carta["_"+(l2+1)][1]} ${Carta["_"+(l3+1)][2]}
-                    </b></h1>
+                    <div class="row">
+                        <h1 style="color:black;"><b>
+                            ${Carta["_"+(l1+1)][0]}, ${Carta["_"+(l2+1)][1]} ${Carta["_"+(l3+1)][2]}
+                        </b></h1>
+                    </div>
+                <div class="row mt-5" style="height:250px;" >
+                    <a href="https://www.facebook.com/profile.php?id=100083412135292" target="_blank"> </a>
+                </div>
                 </div>
             </div>
         </div>
