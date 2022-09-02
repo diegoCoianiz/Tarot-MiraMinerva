@@ -59,12 +59,12 @@ presentarMazo = () => {
 
 startApp = () => {
     document.body.style.backgroundImage = "url('img/fondo_1.jpg')"
-    document.body.style.backgroundSize = "95%"
+    document.body.style.backgroundSize = "100%"
     firstStep.remove()
     InitPogram.innerHTML = 
     `
-    <div class="container-fluid">
-        <div class="row mx-5 my-2">
+    <div class="container-xxl">
+        <div class="row mx-3 my-2">
             <div class="col">
                 <div id="IdTodo">
                 </div>
