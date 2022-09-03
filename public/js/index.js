@@ -4,29 +4,31 @@ const IdMazo = document.getElementById("IdMazo")
 
 //#region posiciones y significados
 const Carta = {
-    _1 : [ " Sé tú mismo", " inventando tu propio camino que te lleve a", " ser Tú Mismo."],
-    _2 : [ " Transforma", " transformandote en función de", " tus objetivos."],
-    _4 : [ " Habita tu espacio vital" , " generando", " tu espacio vital."],
-    _5 : [ " Domina tus capacidades" , " avanzando hacia", " lo que mereces."],
-    _3 : [ " Custodia lo que más amas" , " custodiando" , " lo sagrado que hay en tí."],
-    _6 : [ " Construye", " construyendo el camino que te lleve a", " lo que te lleve más allá de lo conocido."],
-    _7 : [ " Usa tu libre albedrío", " eligiendo libremente", " el uso de tu libre albedrío."], 
-    _8 : [ " Avanza", " definiendo las estrategias para", " el éxito de tus batallas."], 
-    _9 : [ " Define los límites", " comprometiéndote a aceptar", " el respeto de los límites."],
-    _10 : [ " Aprende de tus experiencias", " aprendiendo de tus experiencias lo que necesites saber sobre", " el camino que recorres."],
-    _11 : [ "Mantén en tu lugar", " manteniéndote en equilibrio con", " el reconocimiento de las vicisitudes de la vida."],
-    _12 : [ " Sostente", " sosteniendo", " tu fortaleza."],
-    _13 : [ "Tómate tu tiempo", " poniendo en pausa", " las pausas necesarias."],
-    _14 : [ " Cierra el ciclo", " poniéndole fin a", " el final para que algo nuevo nazca."],
-    _15 : [ " Cambia", " revirtiendo", " los cambios que sean necesarios."],
-    _16 : [ " Seduce", " capturando", " lo que te seduce."],
-    _17 : [ " Rompe con los condicionamientos", " rompiendo con los condicionamientos que te alejan de", " tu último refugio."], 
-    _18 : [ " Entrégate sin temor", " entregándote sin temor a", " lo más genuino de tí." ],
-    _19 : [ " Guarda tus secretos", "ocultando que lo que te impulsa es", "tus misterios." ],
-    _20 : [ " Echa luz", " observando", " tus compromisos."],
-    _21 : [ " Revisa", "revisando", " tus juicios de valor."],
-    _22 : [ " Alcanza tus metas", " alcanzando", " tus actuales propósitos."]
+    _1 : [ " Sé Tú Mismo.", " ¿Es éste Tú camino?", " Aprende del desapego."],
+    _2 : [ " Concéntrate en tus propósitos.", " ¿Estás enfocado en tus objetivos?", " Elabora tus proyectos."],
+    _4 : [ " Desarrolla tu espacio vital." , " ¿Disfrutas de tu hábitat?", " Comparte tu espacio vital."],
+    _5 : [ " Domina tus capacidades." , " ¿Estás resolviendo tus contradicciones?", " Confía en tu poder."],
+    _3 : [ " Custodia lo que amas." , " ¿Atiendes a lo que es sagrado para tí?" , " Cuida lo sagrado que hay en tí."],
+    _6 : [ " Tiende puentes.", " ¿Algo nuevo despierta el deseo? ", " Arriésgate más allá de lo que conoces."],
+    _7 : [ " Usa tu libre albedrío.", " ¿Eliges sabiamente entre pasión y fuerza mayor?", " Elegir implica descartar."],
+    _8 : [ " Avanza sin distracciones.", " ¿Defines tus estrategias?", " El éxito es de los osados."],
+    _9 : [ " Define tus límites.", " ¿Comprometes y respetas tu palabra?", " No invadir está en la base de la justicia y la elegancia."],
+    _10 : [ " Aprende de tus experiencias.", " ¿Te conoces en profundidad?", " Tu sabiduría ilumina a otros."],
+    _11 : [ "Mantén tu identidad.", " ¿Aceptas los cambios externos?", " El movimiento mantiene el equilibrio."],
+    _12 : [ " Sostiene tus principios.", " ¿Sabes ser a la vez fuerte y gentil?", " Muestra fortaleza moral."],
+    _13 : [ "Tómate tu tiempo.", " ¿Te permites pausas?", " Las pausas son necesarias para poder continuar."],
+    _14 : [ " Es hora de cerrar un ciclo.", "¿Haces espacio para que algo nuevo nazca?", " El vacío da lugar a todo."],
+    _15 : [ " No perdura lo que se estanca.", " ¿Cuidas tus palabras? ", " Los cambios son necesarios."],
+    _16 : [ " Lo que tienta, seduce.", " ¿ Es un corset apto para la vida?", " No te demores en salir de las trampas"],
+    _17 : [ " Rompe con los condicionamientos.", " Anticípate a las tormentas", " ¿Estás preparado para una semana de lluvia?"],
+    _18 : [ " Deseas entregarte sin temor.", " Prolonga la valentía de tu juventud y no envejecerás.", " ¿Estás mostrando lo más genuino de tí?" ],
+    _19 : [ " Guarda tus secretos.", " ¿Identificas lo que te inquieta?", "No mires sólo lo imperfecto. " ],
+    _20 : [ " Nada hay oculto que …", " No hay justicia sin equilibrio", " ¿Recuerda tus compromisos?."],
+    _21 : [ " Intenta ser imparcial.", " ¿Qué practicas: crítica o autocrítica?", " Sé benevolente en tus juicios de valor."],
+    _22 : [ " Alcanzar las metas otorga una transitoria serenidad.", " ¿Te dará serenidad alcanzar tus propósitos?", " Integra lo diverso."]
 }
+
+
 //#endregion
 
 CrearMazo = () => {
@@ -58,8 +60,6 @@ presentarMazo = () => {
 }
 
 startApp = () => {
-    document.body.style.backgroundImage = "url('img/fondo_1.jpg')"
-    document.body.style.backgroundSize = "100%"
     firstStep.remove()
     InitPogram.innerHTML = 
     `
@@ -103,6 +103,8 @@ seleccion = (i) => {
 }
 
 devolucion_1 = (lis) => {
+    document.body.style.backgroundImage = "url('img/fondo_1.jpg')"
+    document.body.style.backgroundSize = "100%"
     IdTodo.remove()
     InitPogram.innerHTML = 
         `
@@ -140,11 +142,11 @@ devolucion_2 = (lis) => {
     console.log(lis)
 
     l1 = lis[0], l2 = lis[1], l3 = lis[2]
-    document.body.style.backgroundImage = "url('img/fondo_22.jpg')"
-    console.log("en devolucion dos: llegan los 3 elementos: ", l1, l2, l3)
+    document.body.style.backgroundImage = "url('img/fondo_2.jpg')"
     const devolucion1 = document.getElementById("devolucion1")
     devolucion1.remove()
     
+    prueba = "este es un texto de prueba: "
     InitPogram.innerHTML =
     `
         <div id="devolucion2">
@@ -154,9 +156,17 @@ devolucion_2 = (lis) => {
                 </div>
                 <div class="col-6 text-center my-5" style="height:250px;">
                     <div class="row">
-                        <h1 style="color:black;"><b>
-                            ${Carta["_"+(l1+1)][0]}, ${Carta["_"+(l2+1)][1]} ${Carta["_"+(l3+1)][2]}
-                        </b></h1>
+                        <font face="Luminari">
+                            <h1 style="color:black;"><b>
+                                ${Carta["_"+(l1+1)][0]}
+                            </b></h1>
+                            <h1 style="color:black;"><b>
+                                ${Carta["_"+(l2+1)][1]}
+                            </b></h1>
+                            <h1 style="color:black;"><b>
+                                ${Carta["_"+(l3+1)][2]}
+                            </b></h1>
+                        </font>
                     </div>
                 <div class="row mt-5" class="efectoCartas" style="height:250px;" >
                     <a href="https://www.facebook.com/profile.php?id=100083412135292" target="_blank"> </a>
@@ -165,4 +175,5 @@ devolucion_2 = (lis) => {
             </div>
         </div>
     `
+    
 }
