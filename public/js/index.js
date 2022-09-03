@@ -64,7 +64,7 @@ startApp = () => {
     InitPogram.innerHTML = 
     `
     <div class="container-xxl">
-        <div class="row mx-3 my-2">
+        <div class="row mx-5 my-2">
             <div class="col">
                 <div id="IdTodo">
                 </div>
