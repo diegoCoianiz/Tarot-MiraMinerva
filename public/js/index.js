@@ -80,7 +80,6 @@ startApp = () => {
 
 lista = []
 seleccion = (i) => {
-
     cartaSeleccionada = document.getElementById(`cartaSeleccionada-${i}`)
     cartaSeleccionada.style.cssText = "filter: grayscale(80%);"
 
@@ -149,7 +148,7 @@ devolucion_2 = (lis) => {
     prueba = "este es un texto de prueba: "
     InitPogram.innerHTML =
     `
-        <div id="devolucion2">
+        <div class="container-xxl" id="devolucion2">
             <div class="row row-cols-4">
                 <div class="col">
 
