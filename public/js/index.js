@@ -64,7 +64,7 @@ startApp = () => {
     InitPogram.innerHTML = 
     `
     <div class="container-xxl">
-        <div class="row mx-5 my-2">
+        <div class="row mx-3 my-2">
             <div class="col">
                 <div id="IdTodo">
                 </div>
@@ -138,22 +138,19 @@ devolucion_1 = (lis) => {
 } 
 
 devolucion_2 = (lis) => {
-    console.log(lis)
-
     l1 = lis[0], l2 = lis[1], l3 = lis[2]
     document.body.style.backgroundImage = "url('img/fondo_2.jpg')"
     const devolucion1 = document.getElementById("devolucion1")
     devolucion1.remove()
     
-    prueba = "este es un texto de prueba: "
     InitPogram.innerHTML =
     `
-        <div class="container-xxl" id="devolucion2">
+        <div class="container-xxl">
             <div class="row row-cols-4">
                 <div class="col">
 
                 </div>
-                <div class="col-6 text-center my-5" style="height:250px;">
+                <div class="col-6 my-5 text-center" style="height:250px;">
                     <div class="row">
                         <font face="Luminari">
                             <h1 style="color:black;"><b>
@@ -173,6 +170,5 @@ devolucion_2 = (lis) => {
                 </div>
             </div>
         </div>
-    `
-    
+    `   
 }
